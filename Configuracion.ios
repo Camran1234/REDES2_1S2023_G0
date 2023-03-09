@@ -1,3 +1,34 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@Camran1234 
+Camran1234
+/
+REDES2_1S2023_G0
+Public
+Cannot fork because you own this repository and are not a member of any organizations.
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+REDES2_1S2023_G0/Configuracion.ios
+@Camran1234
+Camran1234 Pruebas
+Latest commit 3e36589 3 minutes ago
+ History
+ 1 contributor
+582 lines (565 sloc)  24.1 KB
+
 -----------------------------------------------IP CONFIGURATION--------------------------------------------
 -------------------------PC1----------------------
 C:\> ipconfig 192.168.10.1 255.255.255.0 192.168.10.0
@@ -99,7 +130,6 @@ Switch(config-vlan)# exit
 
 Switch(config)# interface Fa0/1
 Switch(config-if)# switchport mode trunk
-Switch(config-if)# switchport trunk allowed
 Switch(config-if)# switchport nonegotiate
 Switch(config-if)# exit
 Switch(config)# interface Fa0/2
@@ -183,6 +213,8 @@ Switch> enable
 Switch# conf t
 Switch(config) interface Fa0/1
 Switch(config-if) switchport port-security
+//Switch(config-if) switchport port-security mac-address 00D0.5827.6862
+Switch(config-if) switchport port-security mac-address sticky
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) end
@@ -193,11 +225,15 @@ Switch> enable
 Switch# conf t
 Switch(config) interface Fa0/3
 Switch(config-if) switchport port-security
+//Switch(config-if) switchport port-security mac-address 00E0.F7EC.EB47
+Switch(config-if) switchport port-security mac-address sticky
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) exit
 Switch(config) interface Fa0/4
 Switch(config-if) switchport port-security
+//Switch(config-if) switchport port-security mac-address 0001.96A9.7AC0
+Switch(config-if) switchport port-security mac-address sticky
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) end
@@ -207,16 +243,22 @@ Switch> enable
 Switch# conf t
 Switch(config) interface Fa0/3
 Switch(config-if) switchport port-security
+//Switch(config-if) switchport port-security mac-address 0002.4A84.BCC1
+Switch(config-if) switchport port-security mac-address sticky
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) exit
 Switch(config) interface Fa0/4
 Switch(config-if) switchport port-security
+//Switch(config-if) switchport port-security mac-address 0050.0FD2.2E05
+Switch(config-if) switchport port-security mac-address sticky
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) exit
 Switch(config) interface Fa0/5
 Switch(config-if) switchport port-security
+//Switch(config-if) switchport port-security mac-address 0060.704A.93ED
+Switch(config-if) switchport port-security mac-address sticky
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) end
@@ -226,11 +268,15 @@ Switch> enable
 Switch# conf t
 Switch(config) interface Fa0/3
 Switch(config-if) switchport port-security
+//Switch(config-if) switchport port-security mac-address 000C.CF49.2761
+Switch(config-if) switchport port-security mac-address sticky
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) exit
 Switch(config) interface Fa0/4
 Switch(config-if) switchport port-security
+//Switch(config-if) switchport port-security mac-address 0050.00F7E.2140
+Switch(config-if) switchport port-security mac-address sticky
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) end
@@ -240,6 +286,8 @@ Switch> enable
 Switch# conf t
 Switch(config) interface Fa0/5
 Switch(config-if) switchport port-security
+//Switch(config-if) switchport port-security mac-address 0030.F2B8.BB30
+Switch(config-if) switchport port-security mac-address sticky
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) end
