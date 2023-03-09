@@ -99,7 +99,6 @@ Switch(config-vlan)# exit
 
 Switch(config)# interface Fa0/1
 Switch(config-if)# switchport mode trunk
-Switch(config-if)# switchport trunk allowed
 Switch(config-if)# switchport nonegotiate
 Switch(config-if)# exit
 Switch(config)# interface Fa0/2
@@ -183,6 +182,7 @@ Switch> enable
 Switch# conf t
 Switch(config) interface Fa0/1
 Switch(config-if) switchport port-security
+Switch(config-if) switchport port-security mac-address 00D0.5827.6862
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) end
@@ -193,11 +193,13 @@ Switch> enable
 Switch# conf t
 Switch(config) interface Fa0/3
 Switch(config-if) switchport port-security
+Switch(config-if) switchport port-security mac-address 00E0.F7EC.EB47
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) exit
 Switch(config) interface Fa0/4
 Switch(config-if) switchport port-security
+Switch(config-if) switchport port-security mac-address 0001.96A9.7AC0
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) end
@@ -207,16 +209,19 @@ Switch> enable
 Switch# conf t
 Switch(config) interface Fa0/3
 Switch(config-if) switchport port-security
+Switch(config-if) switchport port-security mac-address 0002.4A84.BCC1
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) exit
 Switch(config) interface Fa0/4
 Switch(config-if) switchport port-security
+Switch(config-if) switchport port-security mac-address 0050.0FD2.2E05
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) exit
 Switch(config) interface Fa0/5
 Switch(config-if) switchport port-security
+Switch(config-if) switchport port-security mac-address 0060.704A.93ED
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) end
@@ -226,11 +231,13 @@ Switch> enable
 Switch# conf t
 Switch(config) interface Fa0/3
 Switch(config-if) switchport port-security
+Switch(config-if) switchport port-security mac-address 000C.CF49.2761
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) exit
 Switch(config) interface Fa0/4
 Switch(config-if) switchport port-security
+Switch(config-if) switchport port-security mac-address 0050.0F7E.2140
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) end
@@ -240,6 +247,7 @@ Switch> enable
 Switch# conf t
 Switch(config) interface Fa0/5
 Switch(config-if) switchport port-security
+Switch(config-if) switchport port-security mac-address 0030.F2B8.BB30
 Switch(config-if) switchport port-security maximum 1
 Switch(config-if) switchport port-security violation shutdown
 Switch(config-if) end
